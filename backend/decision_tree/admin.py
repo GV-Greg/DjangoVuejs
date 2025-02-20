@@ -8,12 +8,7 @@ class ProgramAdmin(admin.ModelAdmin):
     list_display_links = ('name',)
 
     def get_list_display(self, request):
-        return [
-            ('name', 'Nom'),
-            ('version', 'Version'),
-            ('created_at', 'Date de création'),
-            ('updated_at', 'Date de modification')
-        ]
+        return ['name', 'version', 'created_at', 'updated_at']
 
 @admin.register(Subject)
 class SubjectAdmin(admin.ModelAdmin):
@@ -24,13 +19,7 @@ class SubjectAdmin(admin.ModelAdmin):
     list_display_links = ('title',)
 
     def get_list_display(self, request):
-        return [
-            ('title', 'Titre'),
-            ('program', 'Programme'),
-            ('parent_subject', 'Sujet parent'),
-            ('order', 'Ordre'),
-            ('created_at', 'Date de création')
-        ]
+        return ['title', 'program', 'parent_subject', 'order', 'created_at']
 
 @admin.register(Question)
 class QuestionAdmin(admin.ModelAdmin):
@@ -41,12 +30,8 @@ class QuestionAdmin(admin.ModelAdmin):
     list_display_links = ('text',)
 
     def get_list_display(self, request):
-        return [
-            ('text', 'Texte'),
-            ('subject', 'Sujet'),
-            ('order', 'Ordre'),
-            ('created_at', 'Date de création')
-        ]
+        return ['text', 'subject', 'order', 'created_at']
+
 
 @admin.register(Answer)
 class AnswerAdmin(admin.ModelAdmin):
@@ -57,9 +42,4 @@ class AnswerAdmin(admin.ModelAdmin):
     list_display_links = ('text',)
 
     def get_list_display(self, request):
-        return [
-            ('question', 'Question'),
-            ('text', 'Texte'),
-            ('order', 'Ordre'),
-            ('created_at', 'Date de création')
-        ]
+        return ['question', 'text', 'order', 'created_at']
