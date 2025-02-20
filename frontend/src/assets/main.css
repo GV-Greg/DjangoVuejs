@@ -1,0 +1,83 @@
+/* Styles globaux pour le thème Solar */
+body {
+  background-color: #002B36;
+  color: #839496;
+}
+
+.card {
+  background-color: #073642;
+  border-color: #094352;
+}
+
+.card-title {
+  color: #B58900;
+}
+
+.breadcrumb {
+  background-color: #073642;
+  border-radius: 0.25rem;
+  padding: 0.75rem 1rem;
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+  color: #657B83;
+}
+
+.breadcrumb-item.active {
+  color: #839496;
+}
+
+.list-group-item {
+  background-color: #073642;
+  border-color: #094352;
+  color: #839496;
+}
+
+.list-group-item:hover {
+  background-color: #094352;
+}
+
+.list-group-item.active {
+  background-color: #B58900;
+  border-color: #B58900;
+  color: #002B36;
+}
+
+.btn-outline-warning {
+  color: #B58900;
+  border-color: #B58900;
+}
+
+.btn-outline-warning:hover {
+  color: #002B36;
+  background-color: #B58900;
+}
+
+.documentation-content {
+  background-color: #094352;
+  border-radius: 0.25rem;
+  padding: 1rem;
+}
+
+/* Animations */
+.card, .list-group-item {
+  transition: all 0.3s ease;
+}
+
+/* Scrollbar personnalisée */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #073642;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #094352;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #B58900;
+}

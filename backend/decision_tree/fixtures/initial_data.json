@@ -1,0 +1,35 @@
+[
+    {
+        "model": "decision_tree.program",
+        "pk": 1,
+        "fields": {
+            "name": "Omnipro",
+            "description": "Logiciel de gestion pour les professionnels de santé",
+            "version": "1.0",
+            "created_at": "2025-01-08T20:00:00Z",
+            "updated_at": "2025-01-08T20:00:00Z"
+        }
+    },
+    {
+        "model": "decision_tree.program",
+        "pk": 2,
+        "fields": {
+            "name": "xCare",
+            "description": "Solution de gestion des soins",
+            "version": "1.0",
+            "created_at": "2025-01-08T20:00:00Z",
+            "updated_at": "2025-01-08T20:00:00Z"
+        }
+    },
+    {
+        "model": "decision_tree.program",
+        "pk": 3,
+        "fields": {
+            "name": "Autres",
+            "description": "Autres programmes et solutions",
+            "version": "1.0",
+            "created_at": "2025-01-08T20:00:00Z",
+            "updated_at": "2025-01-08T20:00:00Z"
+        }
+    }
+]
