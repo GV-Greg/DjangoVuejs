@@ -7,6 +7,10 @@ echo "Current directory: $(pwd)"
 echo "Listing contents:"
 ls -la
 
+# Générer les migrations si besoin
+echo "Creating migrations..."
+python manage.py makemigrations
+
 # Appliquer les migrations
 echo "Applying database migrations..."
 python manage.py migrate

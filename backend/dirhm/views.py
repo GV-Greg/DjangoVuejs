@@ -14,7 +14,7 @@ def config(request):
     """
     if request.method == 'GET':
         # Récupérer la configuration active la plus récente
-        config = Config.objects.filter(active=True).order_by('-created_at').first()
+        config = Config.get_active_config()
         if config:
             serializer = ConfigSerializer(config)
             return JsonResponse(serializer.data, status=200)
@@ -26,7 +26,7 @@ def config(request):
         serializer = ConfigSerializer(data=request.data)
         if serializer.is_valid():
             # Désactiver toutes les configurations existantes
-            Config.objects.all().update(active=False)
+            Config.objects.filter(active=True).update(active=False)
             
             # Créer la nouvelle configuration (active par défaut)
             config = serializer.save(active=True)
