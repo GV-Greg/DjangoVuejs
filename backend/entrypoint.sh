@@ -16,24 +16,24 @@ echo "Applying database migrations..."
 python manage.py migrate
 
 # Vérifier le contenu des fixtures
-echo "Checking fixtures file:"
-cat decision_tree/fixtures/initial_data.json
+# echo "Checking fixtures file:"
+# cat decision_tree/fixtures/initial_data.json
 
 # Charger les données initiales
-echo "Loading initial data..."
-python manage.py loaddata decision_tree/fixtures/initial_data.json
+# echo "Loading initial data..."
+# python manage.py loaddata decision_tree/fixtures/initial_data.json
 
 # Vérifier les données chargées
-echo "Verifying loaded data..."
-python manage.py shell -c "from decision_tree.models import Program; print('Programs in database:', Program.objects.count()); [print(f'- {p.name} ({p.id})') for p in Program.objects.all()]"
+# echo "Verifying loaded data..."
+# python manage.py shell -c "from decision_tree.models import Program; print('Programs in database:', Program.objects.count()); [print(f'- {p.name} ({p.id})') for p in Program.objects.all()]"
 
 # Collecter les fichiers statiques
 echo "Collecting static files..."
 python manage.py collectstatic --noinput
 
 # Créer le superutilisateur
-echo "Creating superuser..."
-python create_superuser.py
+# echo "Creating superuser..."
+# python create_superuser.py
 
 # Démarrer le serveur
 echo "Starting server..."
