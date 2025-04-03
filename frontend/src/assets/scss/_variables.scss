@@ -36,5 +36,41 @@ $z-index-dropdown: 1000;
 $z-index-fixed: 1030;
 $z-index-modal: 1050;
 
-// Exportez les variables pour pouvoir les utiliser dans d'autres fichiers
-@forward '.';
+// Définition des couleurs du thème
+$theme-colors: (
+  "background": $color-background,
+  "card-bg": $color-card-bg,
+  "border": $color-border,
+  "text": $color-text,
+  "title": $color-title,
+  "link": $color-link,
+  "success": $color-success,
+  "warning": $color-warning,
+  "danger": $color-danger,
+  "info": $color-info,
+  "secondary": $color-secondary
+);
+
+// Génération de $theme-colors-rgb à partir de $theme-colors
+$theme-colors-rgb: ();
+@each $color, $value in $theme-colors {
+  $theme-colors-rgb: map-merge($theme-colors-rgb, ($color: to-rgb($value)));
+}
+
+// Définition des autres variables de couleur
+$theme-colors-text: $theme-colors;
+$theme-colors-bg-subtle: $theme-colors;
+$theme-colors-border-subtle: $theme-colors;
+$body-color-dark: $color-text;
+$body-bg-dark: $color-background;
+$body-emphasis-color-dark: #a9bdbd;
+
+
+// Exportez les variables globalement
+:export {
+  colorBackground: $color-background;
+  colorCardBg: $color-card-bg;
+  colorBorder: $color-border;
+  colorText: $color-text;
+  colorTitle: $color-title;
+}

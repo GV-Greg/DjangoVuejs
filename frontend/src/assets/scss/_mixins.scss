@@ -1,5 +1,5 @@
-@use 'sass:map';
-@use './variables' as vars;
+@use "sass:map";
+@use "./variables" as vars;
 
 // Flexbox center
 @mixin flex-center {
@@ -43,6 +43,3 @@
     text-overflow: ellipsis;
     white-space: nowrap;
 }
-
-// Exportez les mixins
-@forward '.';

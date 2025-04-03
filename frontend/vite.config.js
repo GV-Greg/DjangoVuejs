@@ -12,12 +12,8 @@ export default defineConfig({
   css: {
     preprocessorOptions: {
       scss: {
-        additionalData: `
-          @use "bootstrap/scss/functions";
-          @use "bootstrap/scss/variables";
-          @use "bootstrap/scss/mixins";
-          @use "bootstrap/scss/utilities/assert";
-        `
+        // Suppression de tout prétraitement supplémentaire
+        additionalData: ''
       }
     }
   },

@@ -44,7 +44,11 @@ onMounted(async () => {
 })
 </script>
 
-<style scoped lang="scss">
+<style lang="scss">
+// Importation des variables et mixins globaux
+@import '@/assets/scss/variables';
+@import '@/assets/scss/mixins';
+
 #app {
   min-height: 100vh;
   background-color: $color-background;

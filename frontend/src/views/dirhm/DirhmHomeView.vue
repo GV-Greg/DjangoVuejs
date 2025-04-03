@@ -64,7 +64,7 @@
   }
   </script>
   
-  <style scoped lang="scss">
+  <style lang="scss">
   .dirhm-home {
     max-width: 800px;
     margin: 0 auto;
