@@ -1,0 +1,18 @@
+// Thème clair (par défaut)
+:root {
+    --bg-color: #ffffff;
+    --text-color: #212529;
+  }
+  
+  // Thème sombre
+  [data-theme="dark"] {
+    --bg-color: #121212;
+    --text-color: #f8f9fa;
+  }
+  
+  // Exemple d’utilisation
+  body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+  }
+  

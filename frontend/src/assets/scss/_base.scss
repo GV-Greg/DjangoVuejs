@@ -1,43 +1,4 @@
-@use './variables' as vars;
-
-/* Styles de base */
-body {
-    background-color: vars.$color-background;
-    color: vars.$color-text;
+#app {
     min-height: 100vh;
+    background-color: $color-background;
 }
-
-h1, h2, h3, h4, h5, h6 {
-    color: vars.$color-title;
-    margin-bottom: vars.$spacing-md;
-}
-
-a {
-    color: vars.$color-link;
-    text-decoration: none;
-    transition: vars.$transition-default;
-    
-    &:hover {
-        color: darken(vars.$color-link, 10%);
-    }
-}
-
-/* Scrollbar styling */
-::-webkit-scrollbar {
-    width: 8px;
-}
-
-::-webkit-scrollbar-track {
-    background: vars.$color-card-bg;
-}
-
-::-webkit-scrollbar-thumb {
-    background: vars.$color-border;
-    border-radius: 4px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background: vars.$color-warning;
-}
-
-@forward '.';

@@ -1,34 +1,25 @@
-// Variables et mixins personnalisés
-@import "./variables";
-@import "./mixins";
+// 1. Variables perso en premier
+@import './variables';  // <== déplacé en haut
+@import './mixins';
+@import './utilities';
+@import './themes';
 
-// Imports personnalisés Bootstrap
-@import "./bootstrap-custom";
+// 2. Thème Bootswatch (avant Bootstrap)
+@import "bootswatch/dist/solar/variables";
 
-// Thème Bootswatch
+// 3. Bootstrap functions & core
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/mixins";
+@import "bootstrap/scss/bootstrap";
+
+// 4. Bootswatch overrides (facultatif si tu ne modifies pas les composants)
 @import "bootswatch/dist/solar/bootswatch";
 
-// Styles de base
-@import "./base";
-@import "./utilities";
-
-// Composants
-@import "./components/buttons";
-@import "./components/cards";
-@import "./components/alerts";
-@import "./components/tables";
-@import "./components/navbar";
-@import "./components/container";
-
-// Styles pour Oh Vue Icons
-.ov-icon {
-    vertical-align: middle;
-    
-    &.ov-left {
-        margin-right: $spacing-xs;
-    }
-    
-    &.ov-right {
-        margin-left: $spacing-xs;
-    }
-}
+// 6. Composants
+@import './components/buttons';
+@import './components/navbar';
+@import './components/form';
+@import './components/cards';
+@import './components/tables';
+@import './components/container';

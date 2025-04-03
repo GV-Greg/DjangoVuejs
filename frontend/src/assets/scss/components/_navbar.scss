@@ -1,48 +1,26 @@
-@use '../variables' as vars;
-
-/* Navbar Styles */
-
-.navbar {
-    background-color: vars.$color-card-bg !important;
-    padding: vars.$spacing-md 0;
-    margin-bottom: vars.$spacing-lg;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.navbar-brand {
-    color: vars.$color-title !important;
-    font-weight: bold;
-    font-size: 1.25rem;
-}
-
-.nav-link {
-    color: vars.$color-text !important;
-    padding: vars.$spacing-sm vars.$spacing-md;
-    margin-right: vars.$spacing-sm;
-    border-radius: 4px;
-    transition: vars.$transition-default;
-    
-    &:hover {
-        color: vars.$color-title !important;
-        background-color: rgba(vars.$color-background, 0.5);
+.navbar-custom {
+    background-color: var(--color-primary);
+    padding: 1rem;
+  
+    .navbar-brand {
+      font-weight: bold;
+      color: white;
+      font-size: 1.25rem;
+      text-decoration: none;
+  
+      &:hover {
+        color: lighten(white, 20%);
+      }
     }
-    
-    &.active {
-        color: vars.$color-title !important;
-        font-weight: 600;
+  
+    .nav-link {
+      color: white;
+      margin-left: 1rem;
+      text-decoration: none;
+  
+      &:hover {
+        color: lighten(white, 20%);
+      }
     }
-    
-    i {
-        margin-right: vars.$spacing-xs;
-    }
-}
-
-.navbar-toggler {
-    border-color: vars.$color-border;
-    
-    &:focus {
-        box-shadow: 0 0 0 2px rgba(vars.$color-title, 0.25);
-    }
-}
-
-@forward '.';
+  }
+  

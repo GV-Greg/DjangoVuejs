@@ -1,64 +1,20 @@
-@use '../variables' as vars;
-@use '../mixins' as mixins;
-
-/* Button Styles */
-
-// Base button style
 .btn {
-    border-radius: 4px;
-    font-weight: 600;
-    padding: vars.$spacing-sm vars.$spacing-md;
-    transition: vars.$transition-default;
-}
+  padding: 0.75rem 1.5rem;
+  font-size: 1.25rem;
+  border: none;
+  border-radius: 0.375rem;
+  transition: all 0.2s ease-in-out;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
 
-// Primary button
-.btn-warning {
-    background-color: vars.$color-warning;
-    border-color: vars.$color-warning;
-    color: vars.$color-background;
-    
-    &:hover, &:focus {
-        background-color: darken(vars.$color-warning, 7%);
-        border-color: darken(vars.$color-warning, 7%);
-        transform: translateY(-2px);
+  &.btn-warning {
+    background-color: #ffc107;
+    color: #000;
+
+    &:hover {
+      background-color: darken(#ffc107, 5%);
+      transform: scale(1.05);
     }
-    
-    &:active {
-        transform: translateY(0);
-    }
-    
-    &.btn-lg {
-        padding: vars.$spacing-md vars.$spacing-xl;
-        font-size: 1.25rem;
-        
-        @include mixins.button-hover;
-    }
-}
-  
-// Secondary button
-.btn-secondary {
-  background-color: vars.$color-secondary;
-  border-color: vars.$color-secondary;
-  
-  &:hover, &:focus {
-    background-color: darken(vars.$color-secondary, 7%);
-    border-color: darken(vars.$color-secondary, 7%);
   }
-}
-
-// Outline secondary button
-.btn-outline-secondary {
-  color: $color-text;
-  border-color: vars.$color-secondary;
-  
-  &:hover {
-    background-color: vars.$color-secondary;
-    color: vars.$color-background;
-  }
-}
-
-// Disabled state
-.btn:disabled {
-  opacity: 0.65;
-  cursor: not-allowed;
 }

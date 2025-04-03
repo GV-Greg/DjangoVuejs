@@ -44,35 +44,6 @@ onMounted(async () => {
 })
 </script>
 
-<style lang="scss">
-// Importation des variables et mixins globaux
-@import '@/assets/scss/variables';
-@import '@/assets/scss/mixins';
+<style scoped>
 
-#app {
-  min-height: 100vh;
-  background-color: $color-background;
-}
-
-.navbar {
-  background-color: $color-card-bg !important;
-}
-
-.navbar-brand {
-  color: $color-title !important;
-  font-weight: bold;
-}
-
-.nav-link {
-  color: $color-text !important;
-  
-  &.active {
-    color: $color-title !important;
-    font-weight: bold;
-  }
-  
-  &:hover {
-    color: $color-title !important;
-  }
-}
 </style>
