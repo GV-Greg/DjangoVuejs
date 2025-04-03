@@ -1,40 +1,43 @@
-/* Styles de base */
+@use './variables' as vars;
 
+/* Styles de base */
 body {
-    background-color: $color-background;
-    color: $color-text;
+    background-color: vars.$color-background;
+    color: vars.$color-text;
     min-height: 100vh;
-  }
-  
-  h1, h2, h3, h4, h5, h6 {
-    color: $color-title;
-    margin-bottom: $spacing-md;
-  }
-  
-  a {
-    color: $color-link;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: vars.$color-title;
+    margin-bottom: vars.$spacing-md;
+}
+
+a {
+    color: vars.$color-link;
     text-decoration: none;
-    transition: $transition-default;
+    transition: vars.$transition-default;
     
     &:hover {
-      color: darken($color-link, 10%);
+        color: darken(vars.$color-link, 10%);
     }
-  }
-  
-  /* Scrollbar styling */
-  ::-webkit-scrollbar {
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
     width: 8px;
-  }
-  
-  ::-webkit-scrollbar-track {
-    background: $color-card-bg;
-  }
-  
-  ::-webkit-scrollbar-thumb {
-    background: $color-border;
+}
+
+::-webkit-scrollbar-track {
+    background: vars.$color-card-bg;
+}
+
+::-webkit-scrollbar-thumb {
+    background: vars.$color-border;
     border-radius: 4px;
-  }
-  
-  ::-webkit-scrollbar-thumb:hover {
-    background: $color-warning;
-  }
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: vars.$color-warning;
+}
+
+@forward '.';

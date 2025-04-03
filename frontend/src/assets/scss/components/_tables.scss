@@ -1,31 +1,35 @@
+@use '../variables' as vars;
+
 /* Table Styles */
 
 .table {
-    color: $color-text;
+    color: vars.$color-text;
     width: 100%;
-    margin-bottom: $spacing-lg;
+    margin-bottom: vars.$spacing-lg;
     border-collapse: collapse;
     
     th, td {
-      padding: $spacing-sm $spacing-md;
-      vertical-align: middle;
-      border-bottom: 1px solid $color-border;
+        padding: vars.$spacing-sm vars.$spacing-md;
+        vertical-align: middle;
+        border-bottom: 1px solid vars.$color-border;
     }
     
     th {
-      color: $color-title;
-      font-weight: 600;
-      text-align: left;
+        color: vars.$color-title;
+        font-weight: 600;
+        text-align: left;
     }
-  }
-  
-  .table-responsive {
+}
+
+.table-responsive {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
-  }
-  
-  .table-striped {
+}
+
+.table-striped {
     tbody tr:nth-of-type(odd) {
-      background-color: rgba(0, 43, 54, 0.5);
+        background-color: rgba(0, 43, 54, 0.5);
     }
-  }
+}
+
+@forward '.';

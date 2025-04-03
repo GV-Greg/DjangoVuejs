@@ -10,10 +10,7 @@
 // Pas de logique requise
 </script>
 
-<style lang="scss">
-  @import '@/assets/scss/variables';
-  @import '@/assets/scss/mixins';
-
+<style scoped lang="scss">
   .home {
     .btn-warning {
       // Utilisation des variables et mixins définies

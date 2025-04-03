@@ -1,34 +1,39 @@
+@use '../variables' as vars;
+@use '../mixins' as mixins;
+
 /* Container Styles */
 
 .container {
     width: 100%;
-    padding-right: $spacing-md;
-    padding-left: $spacing-md;
+    padding-right: vars.$spacing-md;
+    padding-left: vars.$spacing-md;
     margin-right: auto;
     margin-left: auto;
     
-    @include respond-to(medium) {
-      max-width: 720px;
+    @include mixins.respond-to(medium) {
+        max-width: 720px;
     }
     
-    @include respond-to(large) {
-      max-width: 960px;
+    @include mixins.respond-to(large) {
+        max-width: 960px;
     }
     
-    @include respond-to(xlarge) {
-      max-width: 1140px;
+    @include mixins.respond-to(xlarge) {
+        max-width: 1140px;
     }
-  }
-  
-  // Page specific containers
-  .home {
+}
+
+// Page specific containers
+.home {
     min-height: 80vh;
-    @include flex-center;
-  }
-  
-  .dirhm-home, .dirhm-config {
+    @include mixins.flex-center;
+}
+
+.dirhm-home, .dirhm-config {
     max-width: 800px;
     margin: 0 auto;
-    padding-top: $spacing-lg;
-    padding-bottom: $spacing-lg;
-  }
+    padding-top: vars.$spacing-lg;
+    padding-bottom: vars.$spacing-lg;
+}
+
+@forward '.';

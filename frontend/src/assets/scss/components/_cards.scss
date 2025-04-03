@@ -1,40 +1,45 @@
+@use '../variables' as vars;
+@use '../mixins' as mixins;
+
 /* Card Styles */
 
 .card {
-    @include card-style;
+    @include mixins.card-style;
     border-radius: 6px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     overflow: hidden;
-    margin-bottom: $spacing-lg;
+    margin-bottom: vars.$spacing-lg;
     
     &:hover {
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
     }
-  }
-  
-  .card-title {
-    color: $color-title;
+}
+
+.card-title {
+    color: vars.$color-title;
     font-weight: 600;
-  }
-  
-  .card-body {
-    padding: $spacing-lg;
-  }
-  
-  .card-header {
-    background-color: $color-background;
-    border-color: $color-border;
+}
+
+.card-body {
+    padding: vars.$spacing-lg;
+}
+
+.card-header {
+    background-color: vars.$color-background;
+    border-color: vars.$color-border;
     font-weight: bold;
-    padding: $spacing-md $spacing-lg;
-  }
-  
-  // Nested cards
-  .card .card {
-    border: 1px solid $color-border;
-  }
-  
-  // Config form card
-  .config-form .card {
-    margin-top: $spacing-lg;
-    border: 1px solid $color-border;
-  }
+    padding: vars.$spacing-md vars.$spacing-lg;
+}
+
+// Nested cards
+.card .card {
+    border: 1px solid vars.$color-border;
+}
+
+// Config form card
+.config-form .card {
+    margin-top: vars.$spacing-lg;
+    border: 1px solid vars.$color-border;
+}
+
+@forward '.';

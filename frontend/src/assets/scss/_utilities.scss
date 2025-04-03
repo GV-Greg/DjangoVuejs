@@ -1,4 +1,4 @@
-/* Utility classes */
+@use './variables' as vars;
 
 // Spacing utilities
 .m-0 { margin: 0 !important; }
@@ -66,3 +66,5 @@
   white-space: nowrap;
   border: 0;
 }
+
+@forward '.';

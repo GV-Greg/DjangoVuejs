@@ -1,61 +1,64 @@
+@use '../variables' as vars;
+@use '../mixins' as mixins;
+
 /* Button Styles */
 
 // Base button style
 .btn {
     border-radius: 4px;
     font-weight: 600;
-    padding: $spacing-sm $spacing-md;
-    transition: $transition-default;
-  }
-  
-  // Primary button
-  .btn-warning {
-    background-color: $color-warning;
-    border-color: $color-warning;
-    color: $color-background;
+    padding: vars.$spacing-sm vars.$spacing-md;
+    transition: vars.$transition-default;
+}
+
+// Primary button
+.btn-warning {
+    background-color: vars.$color-warning;
+    border-color: vars.$color-warning;
+    color: vars.$color-background;
     
     &:hover, &:focus {
-      background-color: darken($color-warning, 7%);
-      border-color: darken($color-warning, 7%);
-      transform: translateY(-2px);
+        background-color: darken(vars.$color-warning, 7%);
+        border-color: darken(vars.$color-warning, 7%);
+        transform: translateY(-2px);
     }
     
     &:active {
-      transform: translateY(0);
+        transform: translateY(0);
     }
     
     &.btn-lg {
-      padding: $spacing-md $spacing-xl;
-      font-size: 1.25rem;
-      
-      @include button-hover;
+        padding: vars.$spacing-md vars.$spacing-xl;
+        font-size: 1.25rem;
+        
+        @include mixins.button-hover;
     }
-  }
+}
   
-  // Secondary button
-  .btn-secondary {
-    background-color: $color-secondary;
-    border-color: $color-secondary;
-    
-    &:hover, &:focus {
-      background-color: darken($color-secondary, 7%);
-      border-color: darken($color-secondary, 7%);
-    }
-  }
+// Secondary button
+.btn-secondary {
+  background-color: vars.$color-secondary;
+  border-color: vars.$color-secondary;
   
-  // Outline secondary button
-  .btn-outline-secondary {
-    color: $color-text;
-    border-color: $color-secondary;
-    
-    &:hover {
-      background-color: $color-secondary;
-      color: $color-background;
-    }
+  &:hover, &:focus {
+    background-color: darken(vars.$color-secondary, 7%);
+    border-color: darken(vars.$color-secondary, 7%);
   }
+}
+
+// Outline secondary button
+.btn-outline-secondary {
+  color: $color-text;
+  border-color: vars.$color-secondary;
   
-  // Disabled state
-  .btn:disabled {
-    opacity: 0.65;
-    cursor: not-allowed;
+  &:hover {
+    background-color: vars.$color-secondary;
+    color: vars.$color-background;
   }
+}
+
+// Disabled state
+.btn:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}

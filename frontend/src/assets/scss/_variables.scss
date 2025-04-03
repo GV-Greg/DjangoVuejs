@@ -35,3 +35,6 @@ $z-index-normal: 1;
 $z-index-dropdown: 1000;
 $z-index-fixed: 1030;
 $z-index-modal: 1050;
+
+// Exportez les variables pour pouvoir les utiliser dans d'autres fichiers
+@forward '.';

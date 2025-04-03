@@ -172,10 +172,7 @@
   }
   </script>
   
-  <style lang="scss">
-  @import '@/assets/scss/variables';
-  @import '@/assets/scss/mixins';
-  
+  <style scoped lang="scss">
   .dirhm-config {
     max-width: 800px;
     margin: 0 auto;
