@@ -1,0 +1,40 @@
+/* Styles de base */
+
+body {
+    background-color: $color-background;
+    color: $color-text;
+    min-height: 100vh;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    color: $color-title;
+    margin-bottom: $spacing-md;
+  }
+  
+  a {
+    color: $color-link;
+    text-decoration: none;
+    transition: $transition-default;
+    
+    &:hover {
+      color: darken($color-link, 10%);
+    }
+  }
+  
+  /* Scrollbar styling */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: $color-card-bg;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: $color-border;
+    border-radius: 4px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: $color-warning;
+  }

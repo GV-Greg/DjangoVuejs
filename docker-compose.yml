@@ -7,7 +7,7 @@ services:
       - "8000:8000"
     volumes:
       - ./backend:/app
-      - ./data:/app/data
+      - ./backend/data:/app/data
     environment:
       - DEBUG=1
       - DJANGO_SETTINGS_MODULE=core.settings
@@ -31,4 +31,3 @@ services:
 
 volumes:
   django_data:
-  - name: django_data

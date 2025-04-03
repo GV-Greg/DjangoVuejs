@@ -1,0 +1,37 @@
+// Couleurs principales (basées sur le thème Solar)
+$color-background: #002B36;
+$color-card-bg: #073642;
+$color-border: #094352;
+$color-text: #839496;
+$color-title: #B58900;
+$color-link: #268BD2;
+
+// Couleurs fonctionnelles
+$color-success: #2AA198;
+$color-warning: #B58900;
+$color-danger: #DC322F;
+$color-info: #268BD2;
+$color-secondary: #586E75;
+
+// Tailles
+$spacing-xs: 0.25rem;
+$spacing-sm: 0.5rem;
+$spacing-md: 1rem;
+$spacing-lg: 1.5rem;
+$spacing-xl: 2rem;
+$spacing-xxl: 3rem;
+
+// Breakpoints
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
+
+// Transitions
+$transition-default: all 0.3s ease;
+
+// Z-index
+$z-index-normal: 1;
+$z-index-dropdown: 1000;
+$z-index-fixed: 1030;
+$z-index-modal: 1050;

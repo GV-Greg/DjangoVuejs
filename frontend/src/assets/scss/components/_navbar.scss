@@ -1,0 +1,44 @@
+/* Navbar Styles */
+
+.navbar {
+    background-color: $color-card-bg !important;
+    padding: $spacing-md 0;
+    margin-bottom: $spacing-lg;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .navbar-brand {
+    color: $color-title !important;
+    font-weight: bold;
+    font-size: 1.25rem;
+  }
+  
+  .nav-link {
+    color: $color-text !important;
+    padding: $spacing-sm $spacing-md;
+    margin-right: $spacing-sm;
+    border-radius: 4px;
+    transition: $transition-default;
+    
+    &:hover {
+      color: $color-title !important;
+      background-color: rgba($color-background, 0.5);
+    }
+    
+    &.active {
+      color: $color-title !important;
+      font-weight: 600;
+    }
+    
+    i {
+      margin-right: $spacing-xs;
+    }
+  }
+  
+  .navbar-toggler {
+    border-color: $color-border;
+    
+    &:focus {
+      box-shadow: 0 0 0 2px rgba($color-title, 0.25);
+    }
+  }

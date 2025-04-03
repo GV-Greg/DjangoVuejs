@@ -1,17 +1,29 @@
 <template>
   <div class="home">
-    <DecisionTree />
+    <router-link to="/dirhm" class="btn btn-warning btn-lg">
+      <v-icon name="hi-arrow-right" class="me-2" /> Accéder à DIRHM
+    </router-link>
   </div>
 </template>
 
 <script setup>
-import DecisionTree from '@/components/DecisionTree.vue'
+// Pas de logique requise
 </script>
 
-<style scoped>
-.home {
-  width: 100%;
-  min-height: 100vh;
-  padding: 2rem 0;
-}
+<style lang="scss">
+  @import '@/assets/scss/variables';
+  @import '@/assets/scss/mixins';
+
+  .home {
+    .btn-warning {
+      // Utilisation des variables et mixins définies
+      padding: $spacing-md $spacing-xl;
+      font-size: 1.25rem;
+      
+      &:hover {
+        background-color: darken($color-warning, 5%);
+        transform: scale(1.05);
+      }
+    }
+  }
 </style>

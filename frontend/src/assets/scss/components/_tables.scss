@@ -1,0 +1,31 @@
+/* Table Styles */
+
+.table {
+    color: $color-text;
+    width: 100%;
+    margin-bottom: $spacing-lg;
+    border-collapse: collapse;
+    
+    th, td {
+      padding: $spacing-sm $spacing-md;
+      vertical-align: middle;
+      border-bottom: 1px solid $color-border;
+    }
+    
+    th {
+      color: $color-title;
+      font-weight: 600;
+      text-align: left;
+    }
+  }
+  
+  .table-responsive {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  .table-striped {
+    tbody tr:nth-of-type(odd) {
+      background-color: rgba(0, 43, 54, 0.5);
+    }
+  }

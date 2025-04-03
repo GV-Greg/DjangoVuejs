@@ -1,0 +1,42 @@
+// Flexbox center
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  // Card style
+  @mixin card-style {
+    background-color: $color-card-bg;
+    border-color: $color-border;
+    color: $color-text;
+    transition: $transition-default;
+  }
+  
+  // Button hover effect
+  @mixin button-hover {
+    &:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    }
+  }
+  
+  // Media query mixins
+  @mixin respond-to($breakpoint) {
+    @if $breakpoint == small {
+      @media (min-width: $breakpoint-sm) { @content; }
+    } @else if $breakpoint == medium {
+      @media (min-width: $breakpoint-md) { @content; }
+    } @else if $breakpoint == large {
+      @media (min-width: $breakpoint-lg) { @content; }
+    } @else if $breakpoint == xlarge {
+      @media (min-width: $breakpoint-xl) { @content; }
+    }
+  }
+  
+  // Text truncate
+  @mixin text-truncate {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }

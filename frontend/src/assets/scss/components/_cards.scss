@@ -1,0 +1,40 @@
+/* Card Styles */
+
+.card {
+    @include card-style;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin-bottom: $spacing-lg;
+    
+    &:hover {
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    }
+  }
+  
+  .card-title {
+    color: $color-title;
+    font-weight: 600;
+  }
+  
+  .card-body {
+    padding: $spacing-lg;
+  }
+  
+  .card-header {
+    background-color: $color-background;
+    border-color: $color-border;
+    font-weight: bold;
+    padding: $spacing-md $spacing-lg;
+  }
+  
+  // Nested cards
+  .card .card {
+    border: 1px solid $color-border;
+  }
+  
+  // Config form card
+  .config-form .card {
+    margin-top: $spacing-lg;
+    border: 1px solid $color-border;
+  }
