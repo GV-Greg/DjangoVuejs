@@ -10,17 +10,20 @@
 // Pas de logique requise
 </script>
 
-<style scoped lang="scss">
-  .home {
-    .btn-warning {
-      // Utilisation des variables et mixins définies
-      padding: $spacing-md $spacing-xl;
-      font-size: 1.25rem;
-      
-      &:hover {
-        background-color: darken($color-warning, 5%);
-        transform: scale(1.05);
-      }
+<style lang="scss">
+@import '@/assets/scss/variables';
+@import '@/assets/scss/mixins';
+
+.home {
+  .btn-warning {
+    // Utilisation des variables et mixins définies
+    padding: $spacing-md $spacing-xl;
+    font-size: 1.25rem;
+    
+    &:hover {
+      background-color: darken($color-warning, 5%);
+      transform: scale(1.05);
     }
   }
+}
 </style>

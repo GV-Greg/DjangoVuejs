@@ -1,56 +1,34 @@
-@use "sass:map";
-@use "sass:color";
+// Imports personnalisés Bootstrap
+@import "./bootstrap-custom";
 
-// Imports Bootstrap specifiques
-@use "bootstrap/scss/functions";
-@use "bootstrap/scss/variables";
-@use "bootstrap/scss/variables-dark";
-@use "bootstrap/scss/maps";
-@use "bootstrap/scss/mixins";
-@use "bootstrap/scss/utilities/assert";
+// Thème Bootswatch
+@import "bootswatch/dist/solar/bootswatch";
 
 // Variables et mixins personnalisés
-@use "./variables" as app-vars;
-@use "./mixins" as app-mixins;
-
-// Configuration et composants Bootstrap
-@use "bootstrap/scss/root";
-@use "bootstrap/scss/reboot";
-@use "bootstrap/scss/type";
-@use "bootstrap/scss/containers";
-@use "bootstrap/scss/grid";
-@use "bootstrap/scss/forms";
-@use "bootstrap/scss/buttons";
-@use "bootstrap/scss/nav";
-@use "bootstrap/scss/navbar";
-@use "bootstrap/scss/card";
-@use "bootstrap/scss/table";
-@use "bootstrap/scss/utilities/api";
-
-// Bootswatch Solar
-@use "bootswatch/dist/solar/bootswatch";
+@import "./variables";
+@import "./mixins";
 
 // Styles de base
-@use "./base";
-@use "./utilities";
+@import "./base";
+@import "./utilities";
 
 // Composants
-@use "./components/buttons";
-@use "./components/cards";
-@use "./components/alerts";
-@use "./components/tables";
-@use "./components/navbar";
-@use "./components/container";
+@import "./components/buttons";
+@import "./components/cards";
+@import "./components/alerts";
+@import "./components/tables";
+@import "./components/navbar";
+@import "./components/container";
 
 // Styles pour Oh Vue Icons
 .ov-icon {
     vertical-align: middle;
     
     &.ov-left {
-        margin-right: app-vars.$spacing-xs;
+        margin-right: $spacing-xs;
     }
     
     &.ov-right {
-        margin-left: app-vars.$spacing-xs;
+        margin-left: $spacing-xs;
     }
 }

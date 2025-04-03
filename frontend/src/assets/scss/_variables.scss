@@ -36,5 +36,11 @@ $z-index-dropdown: 1000;
 $z-index-fixed: 1030;
 $z-index-modal: 1050;
 
-// Exportez les variables pour pouvoir les utiliser dans d'autres fichiers
-@forward '.';
+// Exportez les variables globalement
+:export {
+  colorBackground: $color-background;
+  colorCardBg: $color-card-bg;
+  colorBorder: $color-border;
+  colorText: $color-text;
+  colorTitle: $color-title;
+}
